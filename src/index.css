@@ -99,7 +99,13 @@ All colors MUST be HSL.
 
   html {
     scroll-behavior: smooth;
+    padding-top: 4rem; /* Account for fixed header */
   }
+}
+
+/* Add a subtle background for sections */
+.bg-gray-25 {
+  background-color: hsl(210, 20%, 98%);
 }
 
 /* Custom Animation Classes */
