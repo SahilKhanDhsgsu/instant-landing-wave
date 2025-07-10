@@ -17,47 +17,48 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">WD</span>
-            </div>
-            <span className="text-xl font-bold text-gray-800">WebDesign Pro</span>
+            <img 
+              src="/lovable-uploads/4786249e-a51d-4d6b-b3a7-736c147faef7.png" 
+              alt="CyberDairy Solutions" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('services')}
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+              className="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('why-choose-us')}
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+              className="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium"
             >
               Why Us
             </button>
             <button
               onClick={() => scrollToSection('works')}
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+              className="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium"
             >
               Our Works
             </button>
             <button
               onClick={() => scrollToSection('pricing')}
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+              className="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium"
             >
               Pricing
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+              className="text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium"
             >
               Contact
             </button>
             <Button
               onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
             >
               Get Started
             </Button>
@@ -78,37 +79,37 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <button
                 onClick={() => scrollToSection('services')}
-                className="text-left text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-left text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection('why-choose-us')}
-                className="text-left text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-left text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium"
               >
                 Why Us
               </button>
               <button
                 onClick={() => scrollToSection('works')}
-                className="text-left text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-left text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium"
               >
                 Our Works
               </button>
               <button
                 onClick={() => scrollToSection('pricing')}
-                className="text-left text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-left text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium"
               >
                 Pricing
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-left text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-left text-gray-600 hover:text-orange-600 transition-colors duration-200 font-medium"
               >
                 Contact
               </button>
               <Button
                 onClick={() => scrollToSection('contact')}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-all duration-300 w-fit"
+                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-2 rounded-full transition-all duration-300 w-fit"
               >
                 Get Started
               </Button>
