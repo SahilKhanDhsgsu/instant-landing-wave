@@ -19,13 +19,34 @@ const Hero = () => {
   }, [index, fullText]);
 
   return (
-    <section className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      {/* Floating Background Elements */}
+    <section className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      {/* Enhanced Background with Multiple Layers */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-400/20 rounded-full animate-bounce" style={{animationDelay: '0s'}} />
-        <div className="absolute top-40 right-20 w-16 h-16 bg-purple-400/20 rounded-full animate-bounce" style={{animationDelay: '1s'}} />
-        <div className="absolute bottom-40 left-1/4 w-12 h-12 bg-pink-400/20 rounded-full animate-bounce" style={{animationDelay: '2s'}} />
-        <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-yellow-400/20 rounded-full animate-bounce" style={{animationDelay: '0.5s'}} />
+        {/* Primary gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
+        
+        {/* Animated gradient mesh */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow"></div>
+          <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow" style={{animationDelay: '2s'}}></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow" style={{animationDelay: '4s'}}></div>
+        </div>
+        
+        {/* Floating geometric shapes */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full animate-bounce backdrop-blur-sm" style={{animationDelay: '0s'}} />
+        <div className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-r from-purple-400/30 to-pink-400/30 rounded-full animate-bounce backdrop-blur-sm" style={{animationDelay: '1s'}} />
+        <div className="absolute bottom-40 left-1/4 w-12 h-12 bg-gradient-to-r from-pink-400/30 to-yellow-400/30 rounded-full animate-bounce backdrop-blur-sm" style={{animationDelay: '2s'}} />
+        <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-gradient-to-r from-yellow-400/30 to-green-400/30 rounded-full animate-bounce backdrop-blur-sm" style={{animationDelay: '0.5s'}} />
+        
+        {/* Additional floating elements */}
+        <div className="absolute top-1/2 left-10 w-6 h-6 bg-gradient-to-r from-cyan-400/40 to-blue-400/40 rotate-45 animate-bounce backdrop-blur-sm" style={{animationDelay: '1.5s'}} />
+        <div className="absolute bottom-1/3 right-16 w-10 h-10 bg-gradient-to-r from-indigo-400/40 to-purple-400/40 rotate-12 animate-bounce backdrop-blur-sm" style={{animationDelay: '3s'}} />
+        
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: '50px 50px'
+        }}></div>
       </div>
       
       <div className="container mx-auto px-4 pt-20 pb-12 relative z-10">
@@ -33,7 +54,7 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-white space-y-8 animate-fade-in">
             {/* Floating Badge */}
-            <div className="inline-flex items-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium animate-pulse">
+            <div className="inline-flex items-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium animate-pulse shadow-lg">
               <Zap className="w-4 h-4 mr-2 text-yellow-400" />
               24 Hour Express Delivery
             </div>
@@ -61,7 +82,7 @@ const Hero = () => {
               ].map((benefit, idx) => (
                 <div 
                   key={benefit.text}
-                  className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-lg"
                   style={{animationDelay: `${idx * 0.2}s`}}
                 >
                   <benefit.icon className="w-5 h-5 mr-2 text-green-400" />
@@ -103,10 +124,10 @@ const Hero = () => {
               <div className="bg-gray-700 rounded-b-xl h-4"></div>
               
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 bg-green-400 text-white rounded-full p-3 animate-bounce shadow-lg">
+              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-400 to-emerald-400 text-white rounded-full p-3 animate-bounce shadow-lg">
                 <Star className="w-6 h-6" />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-blue-400 text-white rounded-full p-3 animate-bounce shadow-lg" style={{animationDelay: '0.5s'}}>
+              <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-400 to-cyan-400 text-white rounded-full p-3 animate-bounce shadow-lg" style={{animationDelay: '0.5s'}}>
                 <Zap className="w-6 h-6" />
               </div>
             </div>
